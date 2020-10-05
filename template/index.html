@@ -10,6 +10,9 @@
         <div class='grid-container'>
             <header class='header'>
                 <div class='brand'>
+                    <button onClick='openMenu()'>
+                        &#9776;
+                    </button>
                     <a href='index.html'>Amadeo</a>
                 </div>
                 <div class='header-links'>
@@ -17,8 +20,20 @@
                     <a href='registrate.html'>Registrate</a>
                 </div>
             </header>
+            <aside class='sidebar'>
+                <h3>Categorías</h3>
+                <buton class='sidebar-close-button' onClick='closeMenu()'>
+                    <img class='flecha' src='imagenes/flecha.png' ult='cerrar'>
+                </buton> 
+                <ul>
+                    <li><a href='index.html'>Cereales</a></li>
+                    <li><a href='index.html'>Frutos secos</a></li>
+                    <li><a href='index.html'>Legumbres</a></li>
+                    <li><a href='index.html'>Condimentos</a></li>
+                </ul>
+            </aside>
             <main class='main'>
-                <div class='content'></div>
+                <div class='content'>
                     <ul class='products'>
                         <li>
                             <div class='product'>
@@ -33,9 +48,19 @@
                     </ul> 
                 </div>
             </main>
+            <footer class='footer'>
+                2020 Amadeo Almacén Natural
+            </footer>
         </div>
-        <footer class='footer'>
-            2020 Amadeo Almacén Natural
-        </footer>
+        
+        <script>
+			function openMenu() {
+				document.querySelector('.sidebar').classList.add('open');
+			}
+			function closeMenu() {
+				document.querySelector('.sidebar').classList.remove('open');
+			}
+		
+        </script>
     </body>
 </html>

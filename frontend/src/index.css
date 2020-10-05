@@ -1,0 +1,163 @@
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+body {
+  font: 1.6rem 'Poppins', sans-serif;
+  height: 100vh;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  color: #423723;
+}
+a:hover {
+  color: #362b18;
+}
+a:visited {
+  color: #423723;
+}
+.brand a {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-left: 1.5rem;
+}
+.header-links {
+  margin-right: 1rem;
+}
+.header-links a {
+  margin-right: 1rem;
+}
+.header-links a:hover {
+  color: #362b18;
+  font-weight: bold;
+}
+.grid-container {
+  display: grid;
+  grid-template-areas: 
+  'header'
+  'main'
+  'footer';
+  grid-template-columns: 1fr;
+  grid-template-rows: 5rem 1fr 5rem;
+  height: 100%;
+}
+.header {
+  grid-area: header;
+  background-color: #ecdbc8;
+  color: #423723;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+}
+.main {
+  grid-area: main;
+}
+.footer {
+  grid-area: footer;
+  background-color: #ecdbc8;
+  color: #423723;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/*Home Screen*/
+.products {
+  display: flex;
+  justify-content: flex-start;    /*Para que se ordenen desde el comienzo*/
+  align-items: center;
+  flex-wrap: wrap;
+}
+.products li {
+  list-style: none;
+  padding: 0;
+  flex: 0 34 1rem;
+  margin: 1rem;
+  margin-right: 3rem;
+  height: 27rem;
+  border-bottom: .1rem #ecdbc8 solid;
+}
+.product {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  background-color: rgb(236,219,200, 0.5);
+  transition: all 0.2s;
+}
+.product:hover {
+  background-color: rgb(236,201,200, 0.8);
+}
+.product-name {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: -3rem;
+}
+.product-name a{
+  margin-left: .7rem;
+}
+.product-brand {
+  font-size: 1.2rem;
+  color: #423723;
+}
+.product-price {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-left: .7rem;
+}
+.product-image {
+  max-width: 200px;
+  max-height: 200px;
+}
+/*SIDEBAR*/
+.brand button {
+  font-size: 2rem;
+  padding: .5rem;
+  background: none;
+  border: none;
+  color: #423723;
+  margin-left: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+}
+.brand button:visited {
+  text-decoration: none;
+}
+.brand button:active {
+  color: black;
+}
+.brand button:focus {
+  text-decoration: none;
+  outline: none;
+}
+.sidebar {
+  position: fixed;
+  transform: translateX(-20rem);
+  width: 20rem;
+  background-color: #ecdbc8;
+  transition: all 0.2s;
+  height: 100%;
+}
+.sidebar h3 {
+  margin-left: 1rem;
+}
+.sidebar.open {
+  transform: translateX(0);
+}
+.sidebar ul li {
+  list-style: none;
+  margin-left: -1rem;
+}
+.sidebar ul li:hover {
+  font-weight: bold;
+}
+.flecha {
+  height: 2.3rem;
+  width: 2.3rem;
+  cursor: pointer;
+  position: absolute;
+  right: 0.5rem;
+  top: 2.3rem;
+  right: 1rem;
+}
